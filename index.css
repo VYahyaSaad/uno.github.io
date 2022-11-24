@@ -14,7 +14,7 @@
     width: 88px;
     height: 150px;
     position: absolute;
-    top: 400px;
+    top: 10px;
 }
 .comp{
     display: flex;
@@ -23,6 +23,6 @@
     width: 88px;
     height: 150px;
     position: absolute;
-    top: 10px;
+    top: 90%;
 
 }
