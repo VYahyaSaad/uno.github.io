@@ -14,6 +14,7 @@
     width: 88px;
     height: 150px;
     position: absolute;
+    top: 400px;
 }
 .comp{
     display: flex;

@@ -25,26 +25,12 @@ let rand_color = ()=>{
 
 
 let cardsBtn=(id , no, col)=>{
+let ele = document.getElementById('card-'+id)
+computer_cards.removeChild(ele)
 
-// var id = null;
-//   var elem = document.getElementById(id);
-//   var pos = 0;
-//   clearInterval(id);
-//   id = setInterval(frame, 10);
-//   function frame() {
-//     if (pos == 350) {
-//       clearInterval(id);
-//     } else {
-//       pos++;
-//       elem.style.top = pos + "px";
-//       elem.style.left = pos + "px";
-//     }
-//   }
-  let ele = document.getElementById('card-'+id)
-  // ele.style.top = 400+'px'
-  // ele.style.left = 250 + "px";
-  // ele.style.zIndex = id;
-  // ele.style.transform = `rotate(${id*10}deg)`
+  document.getElementById("center").innerHTML += `
+    <img src="./Images/${col}/${col}${no}.svg" id="card-${id}" style="left: 250px; top:200px;" class="cards-img" alt="" />
+  `;
 };
 
 for(let i = 0; i<11; i++){
