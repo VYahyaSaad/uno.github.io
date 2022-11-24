@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cards-img{
+    width: 88px;
+    height: 150px;
+    position: absolute;
+}
+.comp{
+    display: flex;
+}
