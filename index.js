@@ -1,5 +1,7 @@
 const computer_cards = document.getElementById("comp");
 const human_cards = document.getElementById("human");
+let last = 0;
+
 let rand_color = () => {
   let random = Math.floor(Math.random() * 4);
   let a = "";
@@ -20,17 +22,23 @@ let rand_color = () => {
 let cardsBtn = (id, no, col, fid) => {
   let ele = document.getElementById(fid);
   let add = document.getElementById("center");
-  console.log(ele);
-  if (fid.slice(0, 1) == "h") {
-    add.innerHTML += `
+
+  if (last == 0) {
+    if (fid.slice(0, 1) == "h") {
+      add.innerHTML += `
       <img src="./Images/${col}/${col}${no}.svg" id="card-${id}" style="left: 250px; top:200px;" class="cards-img" alt="" />
     `;
-    document.getElementById("h-card-" + id).parentNode.removeChild(ele);
+      document.getElementById("h-card-" + id).parentNode.removeChild(ele);
+      last = 1;
+    }
   } else {
-    add.innerHTML += `
+    if (fid.slice(0, 1) == "m") {
+      add.innerHTML += `
       <img src="./Images/${col}/${col}${no}.svg" id="card-${id}" style="left: 250px; top:200px;" class="cards-img" alt="" />
     `;
-    document.getElementById("m-card-" + id).parentNode.removeChild(ele);
+      document.getElementById("m-card-" + id).parentNode.removeChild(ele);
+      last = 0;
+    }
   }
 };
 
